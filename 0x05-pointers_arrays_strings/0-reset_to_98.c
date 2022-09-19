@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * reset_to_98 - function that takes a pointer to an int as parameter and updates the value
  * @*n: pointer parameter
@@ -11,5 +12,5 @@ void reset_to_98(int *n)
 	n = &a;
 	*n = 98;
 
-	_putchar("a = %d\n", a);
+	printf("a = %d\n", a);
 }
