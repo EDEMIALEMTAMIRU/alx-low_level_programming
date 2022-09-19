@@ -7,16 +7,18 @@
  */
 void rev_string(char *s)
 {
-	int i;
+	int i, j;
 
 	i = 0;
+	j = 0;
 	while (s[i] != '\0')
 	{
 		i++;
 	}
 	while (i >= 0)
 	{
-		printf("%c", s[i]);
+		s[j] = s[i];
 		i--;
+		j++;
 	}
 }
