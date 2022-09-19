@@ -22,5 +22,5 @@ int _atoi(char *s)
 			continue;
 		i++;
 	}
-	return (s);
+	return (*s);
 }
