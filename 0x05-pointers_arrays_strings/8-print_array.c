@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include "main.h"
+/**
+ * print_array -  prints n elements of an array of integers,
+ * @a: input
+ * @n: input
+ * Return: 0
+ */
+void print_array(int *a, int n)
+{
+	int i;
+
+	i = 0;
+	while (i <= n)
+	{
+		_putchar(a[i]);
+		if (i != n)
+		{
+			_putchar(44);
+			_putchar(32);
+		}
+		i++;
+	}
+	_putchar('\n');
+}
