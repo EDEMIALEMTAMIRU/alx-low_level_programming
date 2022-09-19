@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * reset_to_98 - function that takes a pointer 
+ * reset_to_98 - function that takes a pointe
  * @n: pointer parameter
  * Return: 0
  */
