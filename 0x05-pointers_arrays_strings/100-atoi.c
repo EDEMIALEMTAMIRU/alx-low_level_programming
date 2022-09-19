@@ -15,7 +15,7 @@ int _atoi(char *s)
 	{
 		if (s[i] >= 48 && s[i] <= 57)
 		{
-			s[j] = s[i]);
+			s[j] = s[i];
 			j++;
 		}
 		else
