@@ -11,10 +11,10 @@ void print_array(int *a, int n)
 	int i;
 
 	i = 0;
-	while (i <= n)
+	while (i < n)
 	{
 		_putchar(a[i]);
-		if (i != n)
+		if (i != n - 1)
 		{
 			_putchar(44);
 			_putchar(32);
