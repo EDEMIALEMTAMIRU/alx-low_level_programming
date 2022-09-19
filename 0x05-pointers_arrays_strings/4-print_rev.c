@@ -14,11 +14,9 @@ void print_rev(char *s)
 	{
 		i++;
 	}
-	i = i - 1;
-	while (i >= 0)
+	for (i--; i >= 0; i--)
 	{
-		_putchar(s[i]);
-		i--;
+		printf("%c", (s[i]);
 	}
 	printf("\n");
 }
