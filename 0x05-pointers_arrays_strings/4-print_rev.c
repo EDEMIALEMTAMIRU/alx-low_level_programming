@@ -14,10 +14,10 @@ void print_rev(char *s)
 	{
 		i++;
 	}
-	--i;
-	for ( ; i >= 0; i--)
+	while (i >= 0)
 	{
 		printf("%c", s[i]);
+		i--;
 	}
 	printf("\n");
 }
