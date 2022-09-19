@@ -21,7 +21,8 @@ void rev_string(char *s)
 		i--;
 		j++;
 	}
-	while (s[i] !='\0')
+	i =0;
+	while (s[i] != '\0')
 	{
 		printf("%c", s[i]);
 		i++;
