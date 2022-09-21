@@ -3,7 +3,7 @@
 /**
  * _strncat - string concactination
  * @dest: string one to be appended
- * @src: string two which 
+ * @src: string two which
  * @n: number of string appended
  * Return: always 0
  */
