@@ -1,28 +1,29 @@
 #include <stdio.h>
 #include "main.h"
+
 /**
- * leet - string encoder to 1337
+ * leet - encode string
  * @str: input string
- * Return: Always 0
+ *
+ * Description: encodes a string into 1337
+ * Return: always (0
  */
+
 char *leet(char *str)
 {
-	int i;
+	int i = 0, k;
+	char s[] = "aAeEoOtTlL";
+	char s1[] = "4433007711";
 
-	i = 0;
-	while (str[i] != '\0')
+	for (; str[i] != '\0'; i++)
 	{
-		if (str[i] == 97 || str[i] == 65)
-			str[i] = 52;
-		else if (str[i] == 101 || str[i] == 69)
-			str[i] = 51;
-		else if (str[i] == 111 || str[i] == 79)
-			str[i] = 48;
-		else if (str[i] == 84 || str[i] == 116)
-			str[i] = 55;
-		else if (str[i] == 76 || str[i] == 108)
-			str[i] = 49;
-		i++;
+		for (k = 0; k <= 9; k++)
+		{
+			if (s[k] == str[i])
+			{
+				str[i] = s1[k];
+			}
+		}
 	}
 	return (str);
 }
