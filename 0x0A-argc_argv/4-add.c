@@ -1,50 +1,55 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
+#include <string.h>
+
 /**
- * main - main entery
- * @argc: argument count
- * @argv: argument vector
- * Return: always 0
- */
-int main (int argc, char *argv[])
+ * check_digit - checks char is number or not
+ * @a: input char
+ * Return: int
+ **/
+
+int check_digit(char *a)
 {
-	int i, j, x, z;
-	int trigger = 0;
-	int sum;
-	
-	sum = 0;
-	if (argc == 1)
+	int i, num, len;
+
+	i = 0;
+	num = 0;
+	len = strlen(a);
+	while (i < len)
 	{
-		printf("0\n");
-		return (0);
+		if (a[i] < '0' || a[i] > '9')
+		{
+			return (-1);
+		}
+		else
+			num = num * 10 + (a[i] - '0');
+		i++;
 	}
+	return (num);
+}
+
+/**
+ * main -  program that adds positive numbers
+ * @argc: arguement count
+ * @argv: argument vector
+ * Return: int
+ **/
+
+int main(int argc, char *argv[])
+{
+	int i, num, res;
+
+	res = 0;
 	for (i = 1; i < argc; i++)
 	{
-		z = atoi(argv[i]);
-		for (j = 32; j < 48; j++)
+		num = check_digit(argv[i]);
+		if (num == -1)
 		{
-			for (x = 58; x < 128; x++)
-			{
-				if (z == j || z == x)
-				{
-					trigger = 1;
-					printf("Error\n");
-					return (1);
-					break;
-				}
-			}
+			printf("Error\n");
+			return (1);
 		}
+		res += num;
 	}
-	if (trigger == 0 && argc > 1)
-	{
-		for (i = 0; i < argc; i++)
-		{
-			z = atoi(argv[i]);
-			sum = sum + z;
-		}
-		printf("%d\n", sum);
-		return (0);
-	}
+	printf("%d\n", res);
 	return (0);
 }
