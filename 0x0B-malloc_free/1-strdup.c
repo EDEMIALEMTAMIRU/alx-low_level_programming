@@ -1,7 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 
 /**
  * _strdup - copys of a string
@@ -16,7 +14,7 @@ char *_strdup(char *str)
 	i = 0;
 	if (str == NULL)
 		return (NULL);
-	while (*str != '\0')
+	while (str[i])
 	{
 		i++;
 	}
