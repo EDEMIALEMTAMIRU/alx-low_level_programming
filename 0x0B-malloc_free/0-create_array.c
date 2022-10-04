@@ -11,11 +11,9 @@ char *create_array(unsigned int size, char c)
 {
 	unsigned int i;
 
-	if (size == 0)
-		return (NULL);
-	else
+	if (size != 0)
 	{
-		char *ptr = (char *)malloc(size * sizeof(char));
+		char *ptr = (void *)malloc(size * sizeof(char));
 
 		for (i = 0; i < size; i++)
 		{
@@ -23,4 +21,5 @@ char *create_array(unsigned int size, char c)
 		}
 		return (ptr);
 	}
+	return (NULL);
 }
