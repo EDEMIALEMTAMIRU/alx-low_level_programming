@@ -23,7 +23,7 @@ char *str_concat(char *s1, char *s2)
 		j++;
 	}
 
-	nuh = realloc(s1, sizeof(char) * (j + i + 2));
+	nuh = realloc(s1, sizeof(char) * (j + i + 1));
 
 	if (nuh == NULL)
 		return (NULL);
