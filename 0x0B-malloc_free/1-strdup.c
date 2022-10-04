@@ -14,7 +14,9 @@ char *_strdup(char *str)
 	char *strr;
 
 	i = 0;
-	if (str != NULL)
+	if (str == NULL)
+		return (NULL);
+	else
 	{
 		while (*str != '\0')
 		{
@@ -27,12 +29,9 @@ char *_strdup(char *str)
 			return (NULL);
 		for (j = 0; str[j] != '\0'; j++)
 		{
-			strr[j] = str[j];
+			*(strr + j) = *(str + j);
 		}
-		strr[j] = '\0';
 		free(str);
 		return (strr);
 	}
-	else
-		return (NULL);
 }
