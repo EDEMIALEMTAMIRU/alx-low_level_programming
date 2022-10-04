@@ -2,37 +2,54 @@
 #include <stdlib.h>
 
 /**
- * str_concat - string concactination
- * @s1: input1
- * @s2: input 2
- * Return: always 0
+ * str_concat - concatenates two string
+ *
+ * @s1: the first string
+ * @s2: the string to add to @s1
+ *
+ * Return: a pointer that points to a newly allocated space which
+ * contains the contents of @s1, followed by the contents of @s2,
+ * and null terminated. Should return NULL on failure
  */
+
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int i, j;
-	char *nuh;
+	char *s3;
+	unsigned int s1len = 0;
+	unsigned int s2len = 0;
+	unsigned int s3len;
+	unsigned int i = 0;
+	unsigned int j = 0;
 
-	i = 0;
-	j = 0;
-	while (*(s1 + i))
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
+	while (s1[s1len])
+		s1len++;
+	while (s2[s2len])
+		s2len++;
+
+	s3len = s1len + s2len;
+
+	s3 = malloc(sizeof(char) * s3len + 1);
+	if (s3 == NULL)
+		return (NULL);
+
+	while (i < s1len)
 	{
+		s3[i] = s1[i];
 		i++;
 	}
-	while (*(s2 + j))
+
+	while (i <= s3len)
 	{
+		s3[i] = s2[j];
+		i++;
 		j++;
 	}
-
-	nuh = realloc(s1, sizeof(char) * (j + i + 1));
-
-	if (nuh == NULL)
-		return (NULL);
-	for (j = 0; *(s2 + j) != '\0'; j++)
-	{
-		*(nuh + i + j) = *(s2 + j);
-	}
-	*(nuh + i + j) = '\0';
-	return (nuh);
+	return (s3);
 }
 
 
