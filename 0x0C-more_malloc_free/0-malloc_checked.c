@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * *malloc_checked - malloc
+ * malloc_checked - malloci
  * @b: input size
  * Return: always 0 success
  */
