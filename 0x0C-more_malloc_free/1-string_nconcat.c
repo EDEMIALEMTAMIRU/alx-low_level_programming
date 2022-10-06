@@ -29,7 +29,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	for (j = 0; j < i; j++)
 		ptr[j] = s1[j];
-	for (x = 0; j < tot; j++)
+	for (x = 0; j < tot - 1; j++)
 	{
 		ptr[j] = s2[x];
 		x++;
